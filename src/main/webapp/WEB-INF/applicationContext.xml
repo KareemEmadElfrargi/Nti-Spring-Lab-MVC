@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+      ROOT context (loaded by ContextLoaderListener, default file name).
+      Only non-web beans belong here. Controllers, handler mappings, handler
+      adapters and view resolvers must NOT be declared here: they belong to the
+      DispatcherServlet web context (mvc-dispatcher-servlet.xml).
+      Beans here are visible to the child web context, never the other way round.
+    -->
+    <bean id="greetingService" class="com.example.plumbing.service.GreetingService"/>
+
+</beans>
